@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: org.kearis.formation.javaee7.chapitre1.ex11.Book11IT
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 0.001 sec <<< FAILURE! - in org.kearis.formation.javaee7.chapitre1.ex11.Book11IT
+shouldCreateABook(org.kearis.formation.javaee7.chapitre1.ex11.Book11IT)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.IllegalArgumentException: Object: org.kearis.formation.javaee7.chapitre1.ex11.Book11@36b4091c is not a known entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4228)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:496)
+	at org.kearis.formation.javaee7.chapitre1.ex11.Book11IT.shouldCreateABook(Book11IT.java:20)
+

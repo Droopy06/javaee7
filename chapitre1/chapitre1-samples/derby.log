@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Sep 22 00:10:21 CEST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-014f-f1f5-2c69-00000d0b9f40 
+on database directory memory:/Users/poutsjr/workspace/javaee7/chapitre1/chapitre1-samples/chapitre1DB with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+Loaded from file:/Users/poutsjr/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_40-b27
+user.dir=/Users/poutsjr/workspace/javaee7/chapitre1/chapitre1-samples
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.10.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

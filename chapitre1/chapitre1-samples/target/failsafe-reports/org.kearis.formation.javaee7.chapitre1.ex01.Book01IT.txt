@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: org.kearis.formation.javaee7.chapitre1.ex01.Book01IT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.925 sec <<< FAILURE! - in org.kearis.formation.javaee7.chapitre1.ex01.Book01IT
+shouldCreateABook(org.kearis.formation.javaee7.chapitre1.ex01.Book01IT)  Time elapsed: 0.026 sec  <<< ERROR!
+java.lang.IllegalArgumentException: Unknown entity bean class: class org.kearis.formation.javaee7.chapitre1.ex01.Book01, please verify that this class has been marked with the @Entity annotation.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:707)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:588)
+	at org.kearis.formation.javaee7.chapitre1.ex01.Book01IT.shouldCreateABook(Book01IT.java:19)
+
