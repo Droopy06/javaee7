@@ -3,7 +3,7 @@ Test set: org.kearis.formation.javaee7.chapitre1.ex14.Customer14IT
 -------------------------------------------------------------------------------
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in org.kearis.formation.javaee7.chapitre1.ex14.Customer14IT
 shoulCreateACustomer(org.kearis.formation.javaee7.chapitre1.ex14.Customer14IT)  Time elapsed: 0 sec  <<< ERROR!
-java.lang.IllegalArgumentException: Object: org.kearis.formation.javaee7.chapitre1.ex14.Customer14@5b367418 is not a known entity type.
+java.lang.IllegalArgumentException: Object: org.kearis.formation.javaee7.chapitre1.ex14.Customer14@421d7ce3 is not a known entity type.
 	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4228)
 	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:496)
 	at org.kearis.formation.javaee7.chapitre1.ex14.Customer14IT.shoulCreateACustomer(Customer14IT.java:20)

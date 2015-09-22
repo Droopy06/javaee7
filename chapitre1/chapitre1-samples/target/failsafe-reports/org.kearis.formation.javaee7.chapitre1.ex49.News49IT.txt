@@ -3,7 +3,7 @@ Test set: org.kearis.formation.javaee7.chapitre1.ex49.News49IT
 -------------------------------------------------------------------------------
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in org.kearis.formation.javaee7.chapitre1.ex49.News49IT
 shouldCreateOneNewsWithFourComments(org.kearis.formation.javaee7.chapitre1.ex49.News49IT)  Time elapsed: 0 sec  <<< ERROR!
-java.lang.IllegalArgumentException: Object: org.kearis.formation.javaee7.chapitre1.ex49.News49@12359a82 is not a known entity type.
+java.lang.IllegalArgumentException: Object: org.kearis.formation.javaee7.chapitre1.ex49.News49@3829a0a0 is not a known entity type.
 	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4228)
 	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:496)
 	at org.kearis.formation.javaee7.chapitre1.ex49.News49IT.shouldCreateOneNewsWithFourComments(News49IT.java:23)

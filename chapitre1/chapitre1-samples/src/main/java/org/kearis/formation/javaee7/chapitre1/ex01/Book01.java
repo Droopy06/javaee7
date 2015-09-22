@@ -2,12 +2,14 @@ package org.kearis.formation.javaee7.chapitre1.ex01;
 
 import javax.persistence.*;
 
+@Entity
 public class Book01 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
 
+  @Id
   private Long id;
   private String title;
   private Float price;

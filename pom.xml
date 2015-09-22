@@ -10,6 +10,8 @@
 
   <modules>
     <module>chapitre1</module>
+    <module>chapitre1-1</module>
+    <module>chapitre1-2</module>
     <!--<module>chapitre2</module>-->
     <!--<module>chapitre3</module>-->
     <!--<module>chapitre4</module>-->
