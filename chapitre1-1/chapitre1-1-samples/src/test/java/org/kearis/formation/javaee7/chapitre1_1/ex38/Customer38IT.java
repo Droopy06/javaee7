@@ -62,7 +62,7 @@ public class Customer38IT extends AbstractPersistentTest {
   public void shouldCheckTheAgeOfTheCustomer() throws Exception {
 
     // Instanciates an object
-    Customer38 customer = new Customer38("John", "Smith", "jsmith@gmail.com", "1234565", new Date(), new Date());
+    Customer38 customer = new Customer38("John", "Smith", "jsmith@gmail.com", "1234565", new Date(1993 - 1900,1,1), new Date());
     assertFalse(em.contains(customer));
 
     // Persists the object
@@ -70,12 +70,12 @@ public class Customer38IT extends AbstractPersistentTest {
     em.persist(customer);
     tx.commit();
     assertTrue("should be in the persistence context after persisting", em.contains(customer));
-    assertEquals(new Integer(0), customer.getAge());
+    assertEquals(new Integer(22), customer.getAge());
 
     // Finds the object
     customer = em.find(Customer38.class, customer.getId());
     assertTrue("should be in the persistence context after finding", em.contains(customer));
-    assertEquals(new Integer(0), customer.getAge());
+    assertEquals(new Integer(22), customer.getAge());
 
     // Removes the entity
     tx.begin();

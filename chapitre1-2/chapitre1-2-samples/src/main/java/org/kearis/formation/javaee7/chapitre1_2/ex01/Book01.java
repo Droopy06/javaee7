@@ -10,7 +10,10 @@ public class Book01 {
   // =             Attributes             =
   // ======================================
 
+  @NotNull(message = "Le titre est null")
   private String title;
+  @NotNull
+  @Min(1)
   private Float price;
   private String description;
   private String isbn;

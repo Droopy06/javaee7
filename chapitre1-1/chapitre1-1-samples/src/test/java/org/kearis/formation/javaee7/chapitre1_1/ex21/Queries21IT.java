@@ -8,8 +8,10 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
-public class Queries21IT extends AbstractPersistentTest {
+public class  Queries21IT extends AbstractPersistentTest {
 
   // ======================================
   // =              Constants             =
@@ -142,6 +144,45 @@ public class Queries21IT extends AbstractPersistentTest {
     em.remove(customer05);
     em.remove(customer06);
     tx.commit();
+
+  }
+
+  @Test
+  public void testJPQL() {
+    Customer21 client = new Customer21("thierry" , "poutrain", "toto@free.fr", 23);
+
+    tx.begin();
+    em.persist(client);
+    tx.commit();
+
+    assertNotNull(client.getId());
+    assertNotNull(em.find(Customer21.class, client.getId()));
+
+    TypedQuery<Customer21> query = em.createQuery("select c from Customer21 c where c.age = :age", Customer21.class);
+    query.setParameter("age", 25);
+    List<Customer21> customers = query.getResultList();
+    assertEquals(0, customers.size());
+
+    query.setParameter("age", 23);
+    List<Customer21> customers2 = query.getResultList();
+    assertEquals(1, customers2.size());
+
+  }
+
+  @Test
+  public void testNamedQuery(){
+    Customer21 client = new Customer21("thierry" , "poutrain", "toto@free.fr", 23);
+
+    tx.begin();
+    em.persist(client);
+    tx.commit();
+
+    assertNotNull(client.getId());
+    assertNotNull(em.find(Customer21.class, client.getId()));
+
+    TypedQuery<Customer21> query = em.createNamedQuery(Customer21.FIND_ALL, Customer21.class);
+    List<Customer21> customers2 = query.getResultList();
+    assertEquals(1, customers2.size());
 
   }
 

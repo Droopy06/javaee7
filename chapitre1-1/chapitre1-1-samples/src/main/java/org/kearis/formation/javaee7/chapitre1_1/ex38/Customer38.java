@@ -5,18 +5,24 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+@Entity
 public class Customer38 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
+  @Id
+  @GeneratedValue
   private Long id;
   private String firstName;
   private String lastName;
   private String email;
   private String phoneNumber;
+  @Temporal(TemporalType.DATE)
   private Date dateOfBirth;
+  @Transient
   private Integer age;
+  @Temporal(TemporalType.DATE)
   private Date creationDate;
 
 // ======================================
@@ -46,8 +52,8 @@ public class Customer38 {
   // =          Lifecycle Methods         =
   // ======================================
 
-//  @PrePersist
-//  @PreUpdate
+  @PrePersist
+  @PreUpdate
   private void validate() {
     System.out.println("validateData()");
     if (firstName == null || "".equals(firstName))
@@ -56,9 +62,9 @@ public class Customer38 {
       throw new IllegalArgumentException("Invalid last name");
   }
 
-//  @PostLoad
-//  @PostPersist
-//  @PostUpdate
+  @PostLoad
+  @PostPersist
+  @PostUpdate
   public void calculateAge() {
     System.out.println("calculateAge()");
     if (dateOfBirth == null) {
