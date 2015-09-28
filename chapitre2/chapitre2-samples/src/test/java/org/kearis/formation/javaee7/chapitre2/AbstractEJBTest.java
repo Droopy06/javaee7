@@ -3,12 +3,8 @@ package org.kearis.formation.javaee7.chapitre2;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
-import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by poutsjr on 27/09/2015.

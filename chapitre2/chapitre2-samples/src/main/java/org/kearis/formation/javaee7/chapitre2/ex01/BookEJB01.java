@@ -10,8 +10,6 @@ import java.util.List;
 
 import static org.kearis.formation.javaee7.chapitre2.ex01.Book01.*;
 
-@Stateless
-@Remote
 public class BookEJB01 implements BookEJBRemote01 {
 
   // ======================================

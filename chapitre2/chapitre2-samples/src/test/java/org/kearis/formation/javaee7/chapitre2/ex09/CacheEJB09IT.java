@@ -32,6 +32,9 @@ public class CacheEJB09IT extends AbstractEJBTest {
     // Looks up the EJB
     CacheEJBRemote09 cacheEJB = (CacheEJBRemote09) PortableRemoteObject.narrow(ejb, CacheEJBRemote09.class);
 
+    // Clear cache
+    cacheEJB.clearCache();
+
     // Checks the cache is empty
     assertEquals("Cache should have no items", new Integer(0), cacheEJB.getNumberOfItems());
 

@@ -1,13 +1,5 @@
-org/kearis/formation/javaee7/chapitre2/ex08/Cache08Test.class
-org/kearis/formation/javaee7/chapitre2/ex02/ItemEJB02IT.class
-org/kearis/formation/javaee7/chapitre2/ex15/OrderEJB15IT.class
-org/kearis/formation/javaee7/chapitre2/ex10/CacheEJB10IT.class
 org/kearis/formation/javaee7/chapitre2/ex01/BookEJB01IT.class
-org/kearis/formation/javaee7/chapitre2/ex11/CacheEJB11IT.class
-org/kearis/formation/javaee7/chapitre2/ex05/ItemEJB05IT.class
-org/kearis/formation/javaee7/chapitre2/ex12/CacheEJB12IT.class
-org/kearis/formation/javaee7/chapitre2/ex17/ItemEJB17IT.class
-org/kearis/formation/javaee7/chapitre2/ex07/ShoppingCartEJB07IT.class
-org/kearis/formation/javaee7/chapitre2/ex18/ItemEJB18IT.class
 org/kearis/formation/javaee7/chapitre2/ex09/CacheEJB09IT.class
+org/kearis/formation/javaee7/chapitre2/ex15/OrderEJB15IT.class
+org/kearis/formation/javaee7/chapitre2/ex07/ShoppingCartEJB07IT.class
 org/kearis/formation/javaee7/chapitre2/AbstractEJBTest.class

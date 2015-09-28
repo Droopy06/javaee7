@@ -11,4 +11,6 @@ public interface CacheEJBRemote09 {
     Object getFromCache(Long id);
 
     Integer getNumberOfItems();
+
+    void clearCache();
 }

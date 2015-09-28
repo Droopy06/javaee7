@@ -1,16 +1,10 @@
 package org.kearis.formation.javaee7.chapitre2.ex07;
 
-import javax.ejb.Remote;
-import javax.ejb.Remove;
-import javax.ejb.Stateful;
-import javax.ejb.StatefulTimeout;
+import javax.ejb.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-@Stateful
-@StatefulTimeout(value = 20, unit = TimeUnit.SECONDS)
-@Remote
 public class ShoppingCartEJB07 implements ShoppingCartEJBRemote07 {
 
   // ======================================

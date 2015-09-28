@@ -10,9 +10,4 @@ public interface OrderEJBRemote15 {
     @Asynchronous
     void sendEmailOrderComplete(Order15 order, Customer15 customer);
 
-    @Asynchronous
-    void printOrder(Order15 order);
-
-    @Asynchronous
-    Future<Integer> sendOrderToWorkflow(Order15 order);
 }

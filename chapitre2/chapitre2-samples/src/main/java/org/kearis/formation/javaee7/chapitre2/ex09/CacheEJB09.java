@@ -6,8 +6,6 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-@Singleton
-@Remote
 public class CacheEJB09 implements CacheEJBRemote09 {
 
   // ======================================
@@ -45,5 +43,10 @@ public class CacheEJB09 implements CacheEJBRemote09 {
     if (cache == null || cache.isEmpty())
       return 0;
     return cache.size();
+  }
+
+  @Override
+  public void clearCache() {
+    cache.clear();
   }
 }
