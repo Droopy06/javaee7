@@ -12,7 +12,7 @@ import javax.xml.ws.WebServiceRef;
 public class StoreOnline {
 
     //TODO Inject Service to call
-    @WebServiceRef
+//    @WebServiceRef
     private CardServiceService service;
 
     @WebMethod
