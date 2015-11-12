@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.kearis.formation.javaee7.chapitre4</groupId>
+  <artifactId>chapitre4-consumer</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+  <name>04 - JAX-WS (Consumer)</name>
+
+  <parent>
+    <groupId>org.kearis.formation.javaee7</groupId>
+    <artifactId>chapitre4</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.glassfish.main.extras</groupId>
+      <artifactId>glassfish-embedded-all</artifactId>
+        <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.jvnet.jax-ws-commons</groupId>
+        <artifactId>jaxws-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>wsimport</goal>
+            </goals>
+            <configuration>
+              <!--Stubs can be created either by wsdl URL (GlassFish need to be running with the WS deployed)-->
+              <!--Or by wsdl files (these files are located under the wsdl directory)-->
+
+              <wsdlUrls>
+                <!--<wsdlUrl>http://localhost:8080/chapitre4-service-1.0/CardValidatorService?wsdl</wsdlUrl>-->
+                <wsdlUrl>http://mbp-de-thierry:8080/chapitre4-service-1.0/CardServiceService?wsdl</wsdlUrl>
+              </wsdlUrls>
+<!---->
+              <!--<wsdlFiles>-->
+              <!--<wsdlFile>CardValidatorService.wsdl</wsdlFile>-->
+              <!--</wsdlFiles>-->
+              <keep>true</keep>
+
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>
