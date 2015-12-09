@@ -7,7 +7,7 @@
   <artifactId>chapitre5</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
-  <name>13 - JMS</name>
+  <name>5 - JMS</name>
 
   <parent>
     <groupId>org.kearis.formation.javaee7</groupId>
@@ -16,9 +16,18 @@
   </parent>
 
   <modules>
-    <module>chapitre5-mdb</module>
-    <module>chapitre5-se</module>
     <module>chapitre5-samples</module>
   </modules>
+
+  <dependencies>
+
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${version.junit}</version>
+    </dependency>
+
+  </dependencies>
 
 </project>

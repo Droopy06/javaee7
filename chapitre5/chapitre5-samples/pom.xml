@@ -7,7 +7,7 @@
   <artifactId>chapitre5-samples</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
-  <name>13 - JMS (Samples)</name>
+  <name>5 - JMS (Samples)</name>
 
   <parent>
     <groupId>org.kearis.formation.javaee7</groupId>
@@ -21,30 +21,20 @@
       <artifactId>glassfish-embedded-all</artifactId>
       <scope>compile</scope>
     </dependency>
-  </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifest>
-              <mainClass>org.kearis.formation.javaee7.chapitre5.ex04.Receiver</mainClass>
-              <!--<mainClass>org.kearis.formation.javaee6.chapitre5.jms.ex04.Sender</mainClass>-->
-              <!--<mainClass>org.kearis.formation.javaee6.chapitre5.jms.ex05.Receiver</mainClass>-->
-              <!--<mainClass>org.kearis.formation.javaee6.chapitre5.jms.ex05.Listener</mainClass>-->
-              <!--<mainClass>org.kearis.formation.javaee6.chapitre5.jms.ex05.Sender</mainClass>-->
-              <!--<mainClass>org.kearis.formation.javaee6.chapitre5.jms.ex07.Receiver</mainClass>-->
-              <!--<mainClass>org.kearis.formation.javaee6.chapitre5.jms.ex07.Listener</mainClass>-->
-              <!--<mainClass>org.kearis.formation.javaee6.chapitre5.jms.ex07.Sender</mainClass>-->
-              <!--<mainClass>org.kearis.formation.javaee6.chapitre5.jms.ex14.OrderSender</mainClass>-->
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-all</artifactId>
+      <version>5.12.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-client</artifactId>
+      <version>5.12.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
 </project>
