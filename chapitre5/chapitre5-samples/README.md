@@ -1,24 +1,7 @@
-!!! Warning !!!
-These examples use the new lookup attribute of the @Resource annotation (Commons Annotation 1.1). Because the 1.0 is bundled into the JDK, you need to endorse it :
-copy the %M2_REPO%\org\glassfish\javax.annotation\${glassfish-version}\javax.annotation-${glassfish-version}.jar to the %JAVA_HOME%\lib\endorsed (in the JRE_HOME if needed too)
+http://activemq.apache.org/integrating-apache-activemq-with-glassfish.html
 
-
-To run these examples you must have GlassFish running and create the following administered objects :
-
-To manage JMS connection factories using the command-line utility, use create-jms-resource, list-jms-resources, or delete-jms-resource command
-
-> asadmin create-jms-resource --restype javax.jms.ConnectionFactory jms/javaee7/ConnectionFactory
-> asadmin create-jms-resource --restype javax.jms.Queue jms/javaee7/Queue
-> asadmin create-jms-resource --restype javax.jms.Topic jms/javaee7/Topic
-
-> asadmin list-jms-resources
-jms/javaee7/Queue
-jms/javaee7/Topic
-jms/javaee7/ConnectionFactory
-
-Run the examples with the appclient commannd :
-> appclient -client chapitre5-1.0.jar
-
-If you need to empty a destination (flush all messages), this is what you need to do (the name of the destination is the physical name, not the JNDI name) :
-> asadmin flush-jmsdest --desttype queue jms_javaee6_Queue
-> asadmin flush-jmsdest --desttype topic jms_javaee6_Topic
+> sudo /usr/local/glassfish4/bin/asadmin deploy --type rar --name activemq-rar activemq-rar-5.12.1.rar
+> sudo /usr/local/glassfish4/bin/asadmin create-resource-adapter-config --property ServerUrl='failover\:(tcp\://localhost\:61616)' activemq-rar
+> sudo /usr/local/glassfish4/bin/asadmin create-connector-connection-pool --raname activemq-rar --connectiondefinition javax.jms.ConnectionFactory --ping true --isconnectvalidatereq true jms/myConnectionPool
+> sudo /usr/local/glassfish4/bin/asadmin create-connector-resource --poolname jms/myConnectionPool jms/myConnectionFactory
+> sudo /usr/local/glassfish4/bin/asadmin create-admin-object --raname activemq-rar --restype javax.jms.Queue --property PhysicalName=MY.MAGIC.OUT jms/queue/MY.MAGIC.OUT
