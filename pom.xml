@@ -16,7 +16,7 @@
     <module>chapitre3</module>
     <module>chapitre4</module>
     <module>chapitre5</module>
-    <!--<module>chapitre6</module>-->
+    <module>chapitre6</module>
   </modules>
 
   <properties>
