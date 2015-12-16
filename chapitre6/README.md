@@ -29,9 +29,26 @@ Modifier alors les pages et le Bean pour cela.
 
 # TP4 : Enregistrer et lister les utilisateurs
 Les informations de l'utilisateur doivent désormais être enregistrées en base de données.
-Il s'agit ici d'injecter un EJB qui se chargera de la persitence des informations.
-Une fois enregistré, l'utilisateur aperçoit sur la vue suivante les diférents utilisateurs déjà inséré avec leurs
-informations respectives.
+Il s'agit ici d'injecter un EJB qui se chargera de la persitence des informations, et de créer une méthode dans le 
+controleur (qui sera passée dans l'action du _h:commandButton_).
+
+Ex:
+      
+      @Inject
+      private BookEJB bookEJB;
+      private Book book = new Book();
+        
+      public String doCreateBook() {
+          bookEJB.createBook(book);
+      }
+      
+      <h:commandButton value="Create a book" action="#{bookController.doCreateBook}">
+          <f:ajax execute="@form" render=":booklist :errors"/>
+      </h:commandButton>
+      
+
+Une fois les informations enregistrés, l'utilisateur aperçoit sur la vue suivante les différents utilisateurs déjà 
+insérés avec leurs informations respectives.
 
 # TP5 : Validation des champs du formulaire
 Il existe différentes façons de vérifier qu'un formulaire est bien rempli :
@@ -41,14 +58,13 @@ Il existe différentes façons de vérifier qu'un formulaire est bien rempli :
 * La longueur des chaines de caractère (minimum 5 caractères) doît être valider coté Bean : utiliser BeanValidation
 * Vérifier que le pattern d'un email est bien restecté (BeanValidation) pour l'utilisateur
 
-# TP6 : Utilisation AJAX
-Une fois l'email saisi, l'utilisateur recoit un message signalant que l'email existe déjà ou n'existe pas encore en
-base de données. Pour cela, l'information lui est donné directement à la fin de la saisie de l'information.
-Utiliser les validateurs créés au TP6 pour cela.
-
-# TP7 : Vérifier que l'utilisateur n'existe pas
+# TP6 : Vérifier que l'utilisateur n'existe pas
 Utiliser les faces Validator pour vérifier l'identifiant utilisé pour l'utilisateur n'est pas déjà pris par un autre
 utilisateur.
 
+# TP7 : Utilisation AJAX
+Une fois l'email saisi, l'utilisateur recoit un message signalant que l'email existe déjà ou n'existe pas encore en
+base de données. Pour cela, l'information lui est donné directement à la fin de la saisie de l'information.
+Utiliser les validateurs créés au TP5 pour cela.
 
 
