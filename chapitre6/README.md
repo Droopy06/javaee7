@@ -40,6 +40,7 @@ Ex:
         
       public String doCreateBook() {
           bookEJB.createBook(book);
+          return "listBooks.xhtml";
       }
       
       <h:commandButton value="Create a book" action="#{bookController.doCreateBook}">
