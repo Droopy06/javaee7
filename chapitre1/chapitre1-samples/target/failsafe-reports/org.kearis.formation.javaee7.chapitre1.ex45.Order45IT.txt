@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: org.kearis.formation.javaee7.chapitre1.ex45.Order45IT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE! - in org.kearis.formation.javaee7.chapitre1.ex45.Order45IT
+shouldCreateAnOrderWithTwoOrderLines(org.kearis.formation.javaee7.chapitre1.ex45.Order45IT)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.IllegalArgumentException: Object: org.kearis.formation.javaee7.chapitre1.ex45.Order45@3f07b12c is not a known entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4228)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:496)
+	at org.kearis.formation.javaee7.chapitre1.ex45.Order45IT.shouldCreateAnOrderWithTwoOrderLines(Order45IT.java:28)
+

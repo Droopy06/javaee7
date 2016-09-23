@@ -1,21 +1,22 @@
 package org.kearis.formation.javaee7.chapitre1.ex34;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Entity
 public class Customer34 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String firstName;
   private String lastName;
   private String email;
   private String phoneNumber;
+  @OneToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "adress_id")
   private Address34 address;
 
   // ======================================

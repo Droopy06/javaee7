@@ -3,13 +3,13 @@ package org.kearis.formation.javaee7.chapitre1.ex04;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
+@Entity
 public class News04 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @EmbeddedId
   private NewsId04 id;
   private String content;
 

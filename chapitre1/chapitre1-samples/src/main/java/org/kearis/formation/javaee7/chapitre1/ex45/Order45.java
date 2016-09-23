@@ -3,15 +3,19 @@ package org.kearis.formation.javaee7.chapitre1.ex45;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-
+@Entity
 public class Order45 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
+  @Temporal(TemporalType.DATE)
   private Date creationDate;
+  @OneToMany(fetch = FetchType.EAGER)
+  @JoinColumn(name = "orderline45_id")
   private List<OrderLine45> orderLines;
 
   // ======================================

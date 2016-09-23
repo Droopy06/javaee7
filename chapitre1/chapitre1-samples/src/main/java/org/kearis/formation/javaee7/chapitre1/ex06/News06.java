@@ -5,14 +5,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
-
+@Entity
+@IdClass(NewsId06.class)
 public class News06 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
   private String title;
+  @Id
   private String language;
   private String content;
 

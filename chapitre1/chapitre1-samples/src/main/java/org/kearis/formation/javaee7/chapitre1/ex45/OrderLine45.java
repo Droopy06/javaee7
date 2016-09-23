@@ -1,19 +1,20 @@
 package org.kearis.formation.javaee7.chapitre1.ex45;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "orderline45")
 public class OrderLine45 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String item;
   private Double unitPrice;
+  @Transient
   private Integer quantity;
 
   // ======================================

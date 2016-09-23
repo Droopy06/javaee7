@@ -3,18 +3,23 @@ package org.kearis.formation.javaee7.chapitre1.ex24;
 import javax.persistence.*;
 import java.util.HashMap;
 import java.util.Map;
-
+@Entity
 public class CD24 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String title;
   private Float price;
   private String description;
+  @Basic(fetch = FetchType.LAZY)
+  @Lob
   private byte[] cover;
+  @ElementCollection(fetch = FetchType.LAZY)
   private Map<Integer, String> tracks = new HashMap<>();
 
   // ======================================

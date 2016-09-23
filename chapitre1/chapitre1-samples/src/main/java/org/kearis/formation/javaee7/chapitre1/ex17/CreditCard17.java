@@ -1,16 +1,18 @@
 package org.kearis.formation.javaee7.chapitre1.ex17;
 
 import javax.persistence.*;
-
+@Entity
 public class CreditCard17 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
   private String number;
   private String expiryDate;
+  @Transient
   private Integer controlNumber;
+  @Enumerated(EnumType.STRING)
   private CreditCardType17 creditCardType;
 
   // ======================================

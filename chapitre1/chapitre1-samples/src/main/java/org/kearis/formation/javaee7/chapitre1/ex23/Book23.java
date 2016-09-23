@@ -3,13 +3,14 @@ package org.kearis.formation.javaee7.chapitre1.ex23;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
 public class Book23 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String title;
   private Float price;
@@ -17,6 +18,7 @@ public class Book23 {
   private String isbn;
   private Integer nbOfPage;
   private Boolean illustrations;
+  @ElementCollection(fetch = FetchType.LAZY)
   private List<String> tags = new ArrayList<>();
 
   // ======================================

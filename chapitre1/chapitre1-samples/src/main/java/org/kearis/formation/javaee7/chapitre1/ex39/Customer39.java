@@ -1,18 +1,21 @@
 package org.kearis.formation.javaee7.chapitre1.ex39;
 
 import javax.persistence.*;
-
+@Entity
 public class Customer39 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String firstName;
   private String lastName;
   private String email;
   private String phoneNumber;
+  @OneToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "adress39_id")
   private Address39 address;
 
   // ======================================

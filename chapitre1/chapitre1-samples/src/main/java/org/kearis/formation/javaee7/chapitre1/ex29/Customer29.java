@@ -1,13 +1,14 @@
 package org.kearis.formation.javaee7.chapitre1.ex29;
 
 import javax.persistence.*;
-
+@Entity
 public class Customer29 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String firstName;
   private String lastName;

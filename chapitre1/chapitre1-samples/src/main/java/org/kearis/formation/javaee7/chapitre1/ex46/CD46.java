@@ -1,19 +1,26 @@
 package org.kearis.formation.javaee7.chapitre1.ex46;
 
+import com.sun.istack.internal.NotNull;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
+@Table(name = "CD46")
 public class CD46 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.TABLE)
+  @Column(name="ID",nullable = false)
+  @Basic(optional = false)
   private Long id;
   private String title;
   private Float price;
   private String description;
+  @ManyToMany(mappedBy="appearsOnCDs", cascade = CascadeType.ALL)
   private List<Artist46> createdByArtists;
 
   // ======================================

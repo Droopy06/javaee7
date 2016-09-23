@@ -2,20 +2,24 @@ package org.kearis.formation.javaee7.chapitre1.ex14;
 
 import javax.persistence.*;
 import java.util.Date;
-
+@Entity
 public class Customer14 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String firstName;
   private String lastName;
   private String email;
   private String phoneNumber;
+  @Temporal(TemporalType.DATE)
   private Date dateOfBirth;
+  @Transient
   private Integer age;
+  @Temporal(TemporalType.DATE)
   private Date creationDate;
 
   // ======================================

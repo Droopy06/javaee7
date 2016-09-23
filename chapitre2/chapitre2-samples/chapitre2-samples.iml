@@ -14,7 +14,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <exclude-output />
@@ -29,11 +29,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: org.glassfish.main.extras:glassfish-embedded-all:4.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.glassfish.main.extras:glassfish-embedded-all:4.0" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: com.sun:tools-jar:1">
         <CLASSES>
-          <root url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/lib/tools.jar!/" />
+          <root url="jar://C:/Program Files/Java/jdk1.8.0_101/jre/../lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

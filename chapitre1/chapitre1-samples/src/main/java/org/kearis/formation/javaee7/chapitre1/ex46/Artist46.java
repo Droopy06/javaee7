@@ -3,16 +3,24 @@ package org.kearis.formation.javaee7.chapitre1.ex46;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
+@Table(name = "ARTIST46")
 public class Artist46 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.TABLE)
+  @Column(name = "ID")
+  @Basic(optional = false)
   private Long id;
   private String firstName;
   private String lastName;
+  @ManyToMany(cascade = {CascadeType.PERSIST},fetch = FetchType.LAZY)
+  @JoinTable(name="CD46",
+          joinColumns=@JoinColumn(name="CD46_ID", referencedColumnName="ID",nullable = false),
+          inverseJoinColumns=@JoinColumn(name="ARTIST46_ID", referencedColumnName="ID",nullable = false))
   private List<CD46> appearsOnCDs;
 
   // ======================================

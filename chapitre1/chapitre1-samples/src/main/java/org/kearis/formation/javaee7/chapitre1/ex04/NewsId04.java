@@ -1,7 +1,7 @@
 package org.kearis.formation.javaee7.chapitre1.ex04;
 
 import javax.persistence.Embeddable;
-
+@Embeddable
 public class NewsId04 {
 
   // ======================================

@@ -1,17 +1,20 @@
 package org.kearis.formation.javaee7.chapitre1.ex25;
 
 import javax.persistence.*;
-
+@Entity
 public class Book25 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
+  @Id
+  @GeneratedValue (strategy = GenerationType.AUTO)
   private Long id;
   private String title;
   private Float price;
   private String description;
   private String isbn;
+  @Transient
   private Integer nbOfPage;
   private Boolean illustrations;
 

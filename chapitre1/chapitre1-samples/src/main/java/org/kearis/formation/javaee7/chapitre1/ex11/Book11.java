@@ -1,13 +1,14 @@
 package org.kearis.formation.javaee7.chapitre1.ex11;
 
 import javax.persistence.*;
-
+@Entity
 public class Book11 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String title;
   private Float price;

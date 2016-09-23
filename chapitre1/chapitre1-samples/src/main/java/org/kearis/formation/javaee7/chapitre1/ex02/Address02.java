@@ -1,13 +1,13 @@
 package org.kearis.formation.javaee7.chapitre1.ex02;
 
 import javax.persistence.*;
-
+@Entity
 public class Address02 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
   private Long id;
   private String street1;
   private String street2;
