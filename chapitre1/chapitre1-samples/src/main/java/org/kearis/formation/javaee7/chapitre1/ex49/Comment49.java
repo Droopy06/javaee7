@@ -5,17 +5,21 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+@Entity
+@Table(name = "comment49")
 public class Comment49 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "id")
   private Long id;
   private String nickname;
   private String content;
   private Integer note;
+  @Temporal(TemporalType.DATE)
   private Date postedDate;
 
   // ======================================

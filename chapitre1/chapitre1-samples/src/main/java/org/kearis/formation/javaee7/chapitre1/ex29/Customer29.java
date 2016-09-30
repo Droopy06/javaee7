@@ -14,6 +14,7 @@ public class Customer29 {
   private String lastName;
   private String email;
   private String phoneNumber;
+  @Embedded
   private Address29 address;
 
   // ======================================

@@ -3,15 +3,21 @@ package org.kearis.formation.javaee7.chapitre1.ex49;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
+@Table(name = "News49")
 public class News49 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "ID")
   private Long id;
   private String content;
+  @OneToMany(cascade = {CascadeType.PERSIST},fetch = FetchType.EAGER)
+  @JoinColumn(name = "comment49_id")
+  @OrderBy("ID DESC")
   private List<Comment49> comments;
 
   // ======================================

@@ -1,21 +1,23 @@
 package org.kearis.formation.javaee7.chapitre1.ex32;
 
-import javax.persistence.Access;
-import javax.persistence.AccessType;
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-
+import javax.persistence.*;
+@Embeddable
 public class Address32 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Column(name = "rue1")
   private String street1;
+  @Column(name = "street2")
   private String street2;
+  @Column(name = "city")
   private String city;
+  @Column(name = "state")
   private String state;
+  @Column(name = "zipcode")
   private String zipcode;
+  @Column(name = "country")
   private String country;
 
   // ======================================

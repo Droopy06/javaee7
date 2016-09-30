@@ -18,7 +18,7 @@ public class Artist46 {
   private String firstName;
   private String lastName;
   @ManyToMany(cascade = {CascadeType.PERSIST},fetch = FetchType.LAZY)
-  @JoinTable(name="CD46",
+  @JoinTable(name="jnd_art_cd",
           joinColumns=@JoinColumn(name="CD46_ID", referencedColumnName="ID",nullable = false),
           inverseJoinColumns=@JoinColumn(name="ARTIST46_ID", referencedColumnName="ID",nullable = false))
   private List<CD46> appearsOnCDs;

@@ -25,7 +25,9 @@ public class Book23IT extends AbstractPersistentTest {
     tx.begin();
     em.persist(book);
     tx.commit();
+    Book23 bookBDD = em.find(Book23.class,book.getId());
     assertNotNull("ID should not be null", book.getId());
     assertEquals(3, book.getTags().size());
+    assertNotNull("ID should not be null", bookBDD.getId());
   }
 }

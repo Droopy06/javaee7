@@ -1,18 +1,20 @@
 package org.kearis.formation.javaee7.chapitre1.ex32;
 
 import javax.persistence.*;
-
+@Entity
 public class Customer32 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String firstName;
   private String lastName;
   private String email;
   private String phoneNumber;
+  @Embedded
   private Address32 address;
 
   // ======================================

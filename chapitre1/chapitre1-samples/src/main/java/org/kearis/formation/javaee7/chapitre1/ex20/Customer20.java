@@ -13,6 +13,7 @@ public class Customer20 {
   private String firstName;
   private String lastName;
   private String email;
+  @Column(name = "phone_number",length = 15)
   private String phoneNumber;
 
   // ======================================
@@ -65,6 +66,9 @@ public class Customer20 {
     this.email = email;
   }
 
+
+  @Access(AccessType.PROPERTY)
+  @Column(name = "phone_number",length = 125)
   public String getPhoneNumber() {
     return phoneNumber;
   }

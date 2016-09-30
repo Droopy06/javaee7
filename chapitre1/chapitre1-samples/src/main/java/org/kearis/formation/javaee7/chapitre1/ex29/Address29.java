@@ -3,6 +3,7 @@ package org.kearis.formation.javaee7.chapitre1.ex29;
 import javax.persistence.*;
 
 @Embeddable
+@Access(AccessType.PROPERTY)
 public class Address29 {
 
   // ======================================

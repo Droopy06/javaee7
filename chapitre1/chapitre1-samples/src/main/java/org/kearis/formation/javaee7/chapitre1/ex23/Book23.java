@@ -19,6 +19,7 @@ public class Book23 {
   private Integer nbOfPage;
   private Boolean illustrations;
   @ElementCollection(fetch = FetchType.LAZY)
+  @CollectionTable
   private List<String> tags = new ArrayList<>();
 
   // ======================================
